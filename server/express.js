@@ -1,8 +1,9 @@
 const express = require('express')
 const fetch = require('node-fetch')
+const cors = require('cors')
+
 const app = express()
 const baseURL = 'https://www.metaweather.com/api'
-
 const users = [
   {
     id: 1,
@@ -19,6 +20,8 @@ const users = [
     is_admin: false
   }
 ]
+
+app.use(cors())
 
 app.get('/login', (req, res) => {
   try {
