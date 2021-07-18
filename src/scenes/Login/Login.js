@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import './_login.scss'
 import { getToken, saveToken } from '../../auth'
+import { SERVER_ADRESS } from '../../commons/utils'
+import './_login.scss'
 
 const Login = () => {
   const [username, setUsername] = useState()
@@ -14,7 +15,7 @@ const Login = () => {
   }
   const handleSubmit = async e => {
     const loginUser = async () => {
-      return fetch(`http://localhost:3000/login?username=${username}&password=${password}`, {
+      return fetch(`${SERVER_ADRESS}/login?username=${username}&password=${password}`, {
         method: 'GET',
         headers: {
           'content-type': 'application/json'
