@@ -2,7 +2,6 @@
   "name": "weather-react-redux",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:4000",
   "dependencies": {
     "@material-ui/lab": "^4.0.0-alpha.58",
     "@testing-library/jest-dom": "^4.2.4",
